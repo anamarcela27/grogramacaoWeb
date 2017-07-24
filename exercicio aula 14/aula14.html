@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+		<head>
+			<title>Atributo Data</title>
+		</head>
+		<meta charset="utf-8">
+		<style type="text/css">
+			body{
+				background: gray;
+			}
+			.pessoa::before{
+				content: 'O aluno ';
+			}
+			.pessoa::after{
+				content: ' que possui a idade:; ';
+			}
+			.pessoa[data_idade='28']{
+				color: purple;
+			}
+			
+			
+
+		</style>
+		<script type="text/javascript">
+			function mostrarIdade(v) {
+				var valor = v.getAttribute('data_idade'); // body...
+				alert(valor);
+			}
+		</script>
+<body>
+		<ul>
+			<li class="pessoa" onclick= "mostrarIdade(this)" data_idade="28">Alanio</li>
+			<li class="pessoa" onclick="mostrarIdade(this)" data_idade="28">Ana</li>
+			<li class="pessoa" onclick="mostrarIdade(this)" data_idade="21">Joaquim</li>
+		</ul>
+</body>
+</html>
